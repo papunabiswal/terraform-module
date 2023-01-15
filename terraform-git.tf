@@ -13,18 +13,14 @@ provider "aws" {
   secret_key = "P39AVDbXbsepN4FCkxZhlUx/v12JfbgPkL9OPCYQ"
 }
 
-# resource "aws_instance" "terra-git" {
-#   ami           = "ami-0cca134ec43cf708f"
-#   instance_type = "t2.micro"
+resource "aws_instance" "terra-git" {
+  ami           = "ami-0cca134ec43cf708f"
+  instance_type = "t2.micro"
 
-#   tags = {
-#     Name = "terraform-git"
-#   }
-# }
-
-resource "aws_default_vpc" "new" {
   tags = {
-    Name = "papu"
+    Name = "terraform"
   }
 }
+
+
 
